@@ -7,12 +7,20 @@
 * - А также пользователь должен обладать специальным разрешением (hasSpecialPermission) или временным пропуском (hasTemporaryPass)
 */
 
-// тестовые данные (значения можно менять)
-const isAdmin = false
-const isVerifiedUser = true
-const hasSpecialPermission = true
-const hasTemporaryPass = false
 
-let isAccess
+
+// тестовые данные (значения можно менять)
+const isAdmin = true
+const isVerifiedUser = false
+const hasSpecialPermission = true
+const hasTemporaryPass = true
+let isAccess 
 
 // your code
+if((isAdmin === true || isVerifiedUser === true) && (hasSpecialPermission === true || hasTemporaryPass === true)) {
+    isAccess = true
+} else {
+    isAccess = false
+}
+console.log(isAccess)
+
