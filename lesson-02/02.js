@@ -12,8 +12,8 @@ let dice1 = Math.floor(Math.random()*6)+1
 let dice2 = Math.floor(Math.random()*6)+1
 
 let isWinningDouble // your code
-if (isWinningDouble === true) {
-  ((dice1>3 && dice2 >3) && (dice1 == dice2)  )
+if (isWinningDouble) {
+  (dice1>3)==(dice2>3) 
   console.log('Выигрышный дубль!')
 }else {
   console.log('Не выигрышный дубль.')
