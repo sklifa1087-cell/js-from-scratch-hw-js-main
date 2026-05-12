@@ -22,5 +22,5 @@ let newString = "";
     }
     return newString;
 } 
-newString = doubleEachCharacter(string)
+let newString = doubleEachCharacter(string)
 console.log(newString);

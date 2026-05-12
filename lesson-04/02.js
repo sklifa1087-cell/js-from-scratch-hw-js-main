@@ -19,7 +19,7 @@ let someArray = [1,2,3,4,5,3,2,4,9,9]
 function findUniqueElements(array) {
     let newArray = [];
     for (let i = 0; i< array.length; i++) {
-        for (j = 0; j< i; j++)
+        for (let j = 0; j< i; j++)
         if (array[i] === array[j]){
             newArray.push(array[i])
         }
