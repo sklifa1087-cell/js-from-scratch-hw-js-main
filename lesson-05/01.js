@@ -1,6 +1,5 @@
 /*
 Реализовать метод `addResource`, который будет добавлять указанное количество ресурсов к уже существующим ресурсам в объекте `game`.
-
 Требования к методу:
 
 1. Метод должен принимать два параметра:
@@ -15,5 +14,12 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
+    addResource(type, amount) {
+      if (!game.resources[type]) {
+        console.log('Invalid resource');
+      } else (game.resources[type]= game.resources[type] + amount);
+        console.log(` Всего: ${game.resources[type]}`);
+  }
 }
+game.addResource ("cake", 20);
+  
