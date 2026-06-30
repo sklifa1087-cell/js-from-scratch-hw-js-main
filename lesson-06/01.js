@@ -33,6 +33,13 @@ const filter = (array,callback) => {
   }
   return newArray
 }
+const numbers = [1, 2, 3, 4, 5]
+
+const oddNumbers = filter(numbers, (element, index) => {
+  return element % 2 !== 0
+});
+
+console.log(oddNumbers)
 
 
 
