@@ -24,15 +24,15 @@ const doubledNumbers = map(numbers, (element, index) => {
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
 
-const map = (array,callback) => {
+const map = (array,callback) => { 
   const newArray = []
   for (let i = 0; i < array.length; i++ ){
-    const res = callback(i, array[i])
-    const newRes = array[i]*2
+    const res = callback(array[i])
+    const newRes = (`${res} ${i}`)
 
     newArray.push(newRes)
   }
-  return newArray;
+  return newArray ;
 }
 const numbers = [1, 2, 3, 4, 5]
 
