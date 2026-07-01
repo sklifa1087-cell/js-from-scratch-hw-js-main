@@ -28,7 +28,8 @@ const map = (array,callback) => {
   const newArray = []
   for (let i = 0; i < array.length; i++ ){
     const res = callback(array[i],i)
-    newArray.push(callback(array[i], i));
+    newArray.push(`${i}${res}`);
+    
   }
   return newArray ;
 }
