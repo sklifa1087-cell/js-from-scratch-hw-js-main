@@ -18,33 +18,24 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ];
 
+let currentIndex = 0; 
+
+const imgElement = document.getElementById('web-tech-image');
 const prevBtn = document.getElementById("prev-button");
 const nextBtn = document.getElementById("next-button");
-const imgElement = document.getElementById("web-tech-image");
 
-
-let currentIndex = 0;
-
-
+  
 function updateImage() {
-  imageEl.src = WEB_TECH_IMAGES[currentIndex];
+  imgElement.src =  WEB_TECH_IMAGES[currentIndex];
 }
 
-
 nextBtn.addEventListener('click', () => {
-  currentIndex = currentIndex + 1;
-  if (currentIndex >= WEB_TECH_IMAGES.length) {
-    currentIndex = 0;
-  }
+  currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;
   updateImage();
 });
 
 prevBtn.addEventListener('click', () => {
-  currentIndex = currentIndex - 1;
-  if (currentIndex < 0) {
-    currentIndex = WEB_TECH_IMAGES.length - 1;
-  }
+  currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;
   updateImage();
 });
-
-
+updateImage()
