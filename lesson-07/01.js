@@ -35,7 +35,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;
+  currentIndex = (currentIndex - 1) % WEB_TECH_IMAGES.length;
   updateImage();
 });
 updateImage()
