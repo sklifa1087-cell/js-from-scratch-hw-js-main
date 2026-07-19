@@ -6,4 +6,17 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-function capitalizeWords() {}
+function capitalizeWords(string) {
+const words = string.split(' ');
+    const result = [];
+    
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        if (word) {
+            result.push(word[0].toUpperCase() + word.slice(1).toLowerCase());
+        }
+    }
+    
+    return result.join(' ');
+
+}
