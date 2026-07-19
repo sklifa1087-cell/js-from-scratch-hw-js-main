@@ -13,3 +13,4 @@ function isNumeric(str) {
 // console.log(isNumeric("123abc")) // Ожидаемый результат: false
 // console.log(isNumeric("abc")) // Ожидаемый результат: false
 // console.log(isNumeric(" ")) // Ожидаемый результат: false
+
