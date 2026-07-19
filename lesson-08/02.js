@@ -1,10 +1,11 @@
- /*
+/*
  * Напишите функцию isNumeric, которая принимает строку и проверяет, представляет ли эта строка корректное числовое значение.
  * Если строка является числом, функция должна возвращать true, в противном случае - false.
  */
 
 function isNumeric(str) {
-  // your code
+    if (typeof str !== "string") return false; 
+  return !isNaN(str) && !isNaN(parseFloat(str));
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true

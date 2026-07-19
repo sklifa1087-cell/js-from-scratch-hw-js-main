@@ -20,3 +20,5 @@ const words = string.split(' ');
     return result.join(' ');
 
 }
+const res = capitalizeWords("hello world from javascript")
+console.log(res);
